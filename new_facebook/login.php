@@ -14,7 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
      
      if(count($errors) === 0) {
         $errors= connectUser($pdo);
-        header('Location: homepage.php');
+        if (count($errors) === 0) {
+            header('Location: homepage.php');
+        }
      }
 }
 ?>

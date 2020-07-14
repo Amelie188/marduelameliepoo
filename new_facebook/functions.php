@@ -103,7 +103,7 @@ function connectUser($pdo){
     $result = $res -> fetch();   
     var_dump($result);
     // var_dump($_SESSION['utilisateur']);
-    die();
+    // die();
  if ($result == false) {
         $errors[] = 'Utilisateur inconnu';
     } else {

@@ -13,27 +13,34 @@
  <body>
 
  <?php 
- $query = $pdo->prepare('SELECT * FROM planets WHERE id = :id'); 
+ $query = $pdo->prepare('SELECT * FROM photo WHERE id = :id'); 
  $query->execute(['id'=> $_GET['id']]); 
  ?>
 
 <?php
-$res = $pdo->prepare('SELECT * FROM planets WHERE id = :id');
+$res = $pdo->prepare('SELECT * FROM photo WHERE id = :id');
 $res->execute(['id'=> $_GET['id']]);
 $fetchRes = $res->fetch();
 ?>
 
-<div class="card">
+<div class="card" style="width: 40rem ">
 
- <h1><?php echo($fetchRes['name']) ?></h1><br>
+ <p><?php echo($fetchRes['id']) ?></p><br>
 
- <img src="<?php echo('uploads/'.$fetchRes['image']); ?>"
- alt="Image de la planète <?php echo($fetchRes['name']); ?>" > <br><br>
- <h2><u>Allegiance : </u> <?php echo($fetchRes['allegiance']) ?></h2><br>
- <div><u>Key facts : </u> <?php echo($fetchRes['key_fact']) ?></div><br>
- <div><u>Terrain : </u> <?php echo($fetchRes['terrain']) ?></div><br>
+ <img src="<?php echo('uploads/'.$fetchRes['file_name']); ?>"
+ alt="Image <?php echo($fetchRes['file_name']); ?>" > <br><br>
+ <h4><u>Lieu : </u> <?php echo($fetchRes['lieu_publi']) ?></h4><br>
+ <div><u>Date : </u> <?php echo($fetchRes['date_publication']) ?></div><br>
+ <div><u>Posté par : </u> <?php echo($fetchRes['nom_prenom_utilisateur']) ?></div><br>
  <?php $res->closeCursor(); ?>
+
+
+ <button class="btn btn-outline-info"><a title="Voir le détail" href="homepage.php">Retour</a></button><br><br> 
+
+
  </div>
+
+
 
 </div>
 

@@ -32,17 +32,30 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST'){
         <form method="post" action="addPhoto.php" enctype="multipart/form-data">
 
             <label for="lieu_publi">Lieu</label>
-            <input type="text" class="form-control" id="lieu_publi" name="lieu_publi"/><br><br>
+            <input type="text" class="form-control" id="lieu_publi" required name="lieu_publi"/><br><br>
 
-            <label>Image: </label>
-            <input type="file" class="form-control-file" id="image" name="image"><br><br>
+            <label for="date_publi">Date</label>
+            <input type="date" class="form-control" id="date_publi" required name="date_publi"/><br><br>
 
-            <!-- <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="isPublic" name="isPublic">
-                <label class="form-check-label" for="isPublic">Est publique</label>
-            </div> -->
+            <label for="nom_prenom_utilisateur">Nom</label>
+            <input type="text" class="form-control" id="nom_prenom_utilisateur" required name="nom_prenom_utilisateur"/><br><br>
+
+            <label>Photo: </label>
+            <input type="file" class="form-control-file" id="photo" required name="photo"><br><br>
 
             <input type="submit" placeholder="Publier">
+
+
+            <?php
+                if(count($errors) != 0){ //affiche ici, la liste des erreurs, 
+                echo(' <h2>Erreurs lors de la dernière soumission du formulaire : </h2>');
+                foreach ($errors as $error){
+                echo('<div class="error">'.$error.'</div>');
+                    }
+                 }
+    ?>
+
+
 
         </form>
 
