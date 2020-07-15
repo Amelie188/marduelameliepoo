@@ -39,11 +39,11 @@ require('includes.php');
                     <p class="card-text"><em><strong>Posté le: </strong></em> <?php echo($info['date_publication']); ?></p>
                     <p class="card-text"><em><strong>Posté par: </strong></em><?php echo($info['nom_prenom_utilisateur']); ?></p>
 
-                    <!-- <a href="editPlanet.php?id=<?php echo($info['id']); ?>" class="btn btn-primary">Modifier une planète</a> -->
+                    <a href="editPhoto.php?id=<?php echo($info['id']); ?>" class="btn btn-primary">Modifier une photo</a> <br><br>
 
-                    <a href="photoDetail.php?id=<?php echo($info['id']); ?>" class="btn btn-primary">En savoir plus</a>
+                    <a href="photoDetail.php?id=<?php echo($info['id']); ?>" class="btn btn-primary">En savoir plus</a><br><br>
 
-                    <!-- <a href="deletePlanet.php?id=<?php echo($info['id']); ?>" class="btn btn-primary">Supprimer</a> -->
+                    <a href="deletePhoto.php?id=<?php echo($info['id']); ?>" class="btn btn-primary">Supprimer ma photo</a>
                 </div>
             </div><br>
 

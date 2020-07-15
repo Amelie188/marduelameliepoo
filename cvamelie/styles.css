@@ -1,0 +1,47 @@
+#experiences {
+    border:solid black 1px;
+    display: flex;
+}
+
+#competences {
+    border:solid black 1px;
+    display: flex;
+}
+
+.card{
+    margin: 1.2rem;
+}
+
+#bodylogin{
+background-image: url("images/imageBureau.jpg");
+background-size:cover;
+}
+
+#register{
+background-image: url("images/imageBureau.jpg");
+background-size:cover;
+}
+
+.partie{
+margin-top: 4rem;
+text-align: center;
+font-family: 'Raleway', sans-serif;
+}
+
+.btn-outline-secondary{
+margin-left: 43rem;
+}
+
+h1{
+    margin-top: 8rem;
+}
+#bodyhomepage{
+    background-image: url("images/imageBureau.jpg");
+    background-size:cover;
+    /* opacity: 1; */
+    }
+
+.disconect{
+    margin-top: 5rem;
+
+} 
